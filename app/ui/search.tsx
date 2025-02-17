@@ -13,7 +13,8 @@ export default function Search({ placeholder }: { placeholder: string }) {
     if (newInput) {
       params.set("query", newInput);
     } else params.delete("query");
-    replace(`${pathname}?${pathname.toString()}`);
+    replace(`${pathname}?${params.toString()}`);
+    console.log(newInput);
   };
 
   return (
